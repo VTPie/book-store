@@ -1,0 +1,25 @@
+.title{
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+table{     
+    border-collapse: collapse;
+    th, td{
+        padding: 10px 20px;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    thead{
+        font-size: 18px;
+        background-color: lightblue;
+    }
+    tbody{
+        td{
+            text-align: center;
+        }
+        tr:nth-child(even){
+            background-color: lightblue;
+        }
+    }
+}
