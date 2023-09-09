@@ -2,6 +2,7 @@
     font-size: 25px;
     text-align: center;
     font-weight: bold;
+    margin: 10px 0 20px 0;
 }
 table{     
     border-collapse: collapse;
@@ -20,6 +21,24 @@ table{
         }
         tr:nth-child(even){
             background-color: lightblue;
+        }
+    }
+}
+.addNew{
+    font-weight: bold;
+}
+form{
+    table{
+        border: 1px solid black;
+        td{
+            border: none;
+            padding: 5px 10px;
+        }
+        .btnAdd-container{
+            text-align: center;
+            button{
+                padding: 3px 15px;
+            }
         }
     }
 }

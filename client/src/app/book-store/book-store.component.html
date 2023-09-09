@@ -1,6 +1,3 @@
-<div *ngIf="error">
-    <p>Error: {{ error }}</p>
-</div>
 <div class="books-container" *ngIf="books">
     <p class="title">List of Books</p>
     <table>
@@ -21,6 +18,26 @@
             </tr>
         </tbody>
     </table>
+    <p class="addNew">Add new book</p>
+    <form (ngSubmit)="addBook()" [formGroup]="bookForm">
+        <table>
+            <tr>
+                <td><label for="bookName">Book name: </label></td>
+                <td><input id="bookName" type="text" formControlName="name"></td>
+            </tr>
+            <tr>
+                <td><label for="bookCate">Book category: </label></td>
+                <td><input id="bookCate" type="text" formControlName="category"></td>
+            </tr>
+            <tr>
+                <td><label for="bookAuthID">AuthorID: </label></td>
+                <td><input id="bookAuth" type="number" formControlName="authorID"></td>
+            </tr>
+            <tr class="btnAdd-container">
+                <td colspan="2"><button class="btnAdd">Add</button></td>
+            </tr>
+        </table>
+    </form>
 </div>
 <div class="authors-container" *ngIf="authors">
     <p class="title">List of Authors</p>
@@ -40,4 +57,20 @@
             </tr>
         </tbody>
     </table>
+    <p class="addNew">Add new author</p>
+    <form (ngSubmit)="addAuthor()" [formGroup]="authorForm">
+        <table>
+            <tr>
+                <td><label for="authorName">Author name: </label></td>
+                <td><input id="authorName" type="text" formControlName="name"></td>
+            </tr>
+            <tr>
+                <td><label for="authorHomeTown">Home town: </label></td>
+                <td><input id="authorHomeTown" type="text" formControlName="homeTown"></td>
+            </tr>
+            <tr class="btnAdd-container">
+                <td colspan="2"><button class="btnAdd">Add</button></td>
+            </tr>
+        </table>
+    </form>
 </div>
